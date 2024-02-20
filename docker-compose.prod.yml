@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    image: ghcr.io/marcbarry/files-gallery/files-gallery:latest
+    container_name: files-gallery
+    restart: 'unless-stopped'
+    hostname: files.gallery.local # not used, but without it apache will complain about unknown fqdn on startup
+    ports:
+      - "8080:80"
+    volumes:
+      - ./config:/config
+      - ./media:/media
+
+volumes:
+  config:
+  media:

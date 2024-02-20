@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    container_name: files-gallery
+    hostname: files.gallery.local # not used, but without it apache will complain about unknown fqdn on startup
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./config:/config
+      - C:\pictures:/media
+
+volumes:
+  config:
