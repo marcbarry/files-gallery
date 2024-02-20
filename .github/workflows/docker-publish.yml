@@ -24,4 +24,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/${{ github.repository }}/cgmsharp:latest
+        tags: ghcr.io/${{ github.repository }}/file-gallery:latest
