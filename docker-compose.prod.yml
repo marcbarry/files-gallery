@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  app:
+  files_gallery:
     image: ghcr.io/marcbarry/files-gallery/files-gallery:latest
     container_name: files-gallery
     restart: 'unless-stopped'
